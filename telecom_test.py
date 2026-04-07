@@ -36,7 +36,7 @@ class MLP(nn.Module):
 @st.cache_resource
 def load_model():
     model = MLP()
-    model.load_state_dict(torch.load("/home/lonewolf8/Desktop/telecom_churn/telecom_data_model.pth", map_location="cpu"))
+    model.load_state_dict(torch.load("telecom_data_model.pth", map_location="cpu"))
     model.eval()
     return model
 
